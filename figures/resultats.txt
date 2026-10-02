@@ -1,0 +1,226 @@
+======================================================================
+POPULATION
+======================================================================
+Lignes de cards.csv: 35081
+Creatures (type Creature): 19169
+Creatures avec mana, force, endurance, rarete et prix numeriques: 18025
+Ecartees pour l'ACP: 1144
+Groupes de couleur (population ACP):
+groupe_couleur
+Monocolore     13664
+Multicolore     3577
+Incolore         784
+
+Controle de la standardisation (moyenne, ecart-type):
+      mana  force  endurance  rarete  impressions (log)  prix (log)
+mean  -0.0   -0.0        0.0    -0.0                0.0        -0.0
+std    1.0    1.0        1.0     1.0                1.0         1.0
+
+Correlations:
+                   mana  force  endurance  rarete  impressions (log)  prix (log)
+mana               1.00   0.67       0.65    0.26               0.05        0.14
+force              0.67   1.00       0.74    0.25               0.07        0.14
+endurance          0.65   0.74       1.00    0.27               0.08        0.17
+rarete             0.26   0.25       0.27    1.00               0.34        0.50
+impressions (log)  0.05   0.07       0.08    0.34               1.00        0.30
+prix (log)         0.14   0.14       0.17    0.50               0.30        1.00
+
+======================================================================
+ACP - VALEURS PROPRES
+======================================================================
+Dimension  Valeur singuliere  Valeur propre  % variance  % cumule
+     Dim1             219.42           2.67       44.52     44.52
+     Dim2             164.94           1.51       25.15     69.67
+     Dim3             113.87           0.72       11.99     81.66
+     Dim4              93.34           0.48        8.06     89.71
+     Dim5              80.92           0.36        6.05     95.77
+     Dim6              67.64           0.25        4.23    100.00
+Composantes avec valeur propre >= 1: 2
+Variance du premier plan (Dim1 + Dim2): 69.7 %
+
+Charges (correlations variable-composante), triees sur Dim1:
+                    Dim1   Dim2   Dim3   Dim4
+endurance          0.837 -0.319  0.051 -0.070
+force              0.833 -0.352  0.072 -0.066
+mana               0.801 -0.330  0.012  0.033
+rarete             0.583  0.572 -0.229  0.526
+prix (log)         0.452  0.656 -0.416 -0.436
+impressions (log)  0.301  0.646  0.697 -0.076
+
+Cartes extremes
+
+Dim1 negatif:
+                 nom  Dim1  Dim2
+Half-Squirrel, Half- -3.10  1.17
+    Clockwork Beetle -3.05 -0.06
+         Spike Drone -3.04 -0.04
+     Iron Apprentice -3.03 -0.02
+    Ugin's Conjurant -2.97  0.59
+      Simic Initiate -2.90  0.35
+         Little Girl -2.89 -0.09
+          Star Pupil -2.89  0.37
+
+Dim1 positif:
+                       nom  Dim1   Dim2
+B.F.M. (Big Furry Monster) 57.98 -28.65
+   Emrakul, the Aeons Torn 12.32  -1.19
+ Emrakul, the Promised End 10.50  -0.74
+   Emrakul and Chatterfang 10.43  -2.38
+           Worldspine Wurm 10.38  -2.34
+      Impervious Greatwurm 10.03  -3.58
+   The Walls of Ba Sing Se  9.83  -1.11
+ Kozilek, Butcher of Truth  9.28   0.56
+
+Dim2 negatif:
+                       nom  Dim1   Dim2
+B.F.M. (Big Furry Monster) 57.98 -28.65
+           Autochthon Wurm  8.52  -4.14
+              Rust Goliath  5.31  -4.08
+       Kozilek, Compleated  7.05  -4.05
+     Depth Charge Colossus  4.32  -4.01
+      Impervious Greatwurm 10.03  -3.58
+       Krosan Cloudscraper  7.90  -3.57
+      Hierophant Bio-Titan  8.00  -3.56
+
+Dim2 positif:
+                    nom  Dim1  Dim2
+      Birds of Paradise  0.59  6.90
+Cloud, Midgar Mercenary  1.97  6.65
+       Lord of Atlantis  2.07  6.49
+         Royal Assassin  1.49  6.29
+   Vesuvan Doppelganger  1.67  6.27
+        Snapcaster Mage  1.70  6.23
+       Will-o'-the-Wisp  0.43  6.21
+             Rock Hydra  0.46  6.11
+
+======================================================================
+AFC - TYPE DE CREATURE x COULEUR
+======================================================================
+Couples (type, couleur) avant filtre: 41688. Types gardes (>= 400 occurrences): 24.
+Types: Human, Wizard, Warrior, Soldier, Elf, Cleric, Spirit, Elemental, Rogue, Zombie, Dragon, Knight, Goblin, Beast, Shaman, Phyrexian, Bird, Vampire, Druid, Cat, Hero, Horror, Merfolk, Artificer
+couleur    Blanc  Bleu  Noir  Rouge  Vert  Incolore
+type                                               
+Human       1962  1228  1064   1225   874         8
+Wizard       223   910   270    255   144         4
+Warrior      293   104   270    593   438         3
+Soldier      765   144   123    203   107         7
+Elf           95    75   126     52   602         0
+Cleric       507    44   199     47    65         2
+Spirit       242   195   180     98   121         7
+Elemental     77   170    85    295   203         4
+Rogue         46   265   274    148    64         0
+Zombie        31   112   542     47    45         1
+Dragon        88   110    99    286   110        18
+Knight       337    55   135     95    59         4
+Goblin         8    17    92    507    39         2
+Beast         61    76    65    133   316        10
+Shaman        28    45   119    263   204         0
+Phyrexian     88    77   217     66    95        45
+Bird         216   213    55     28    42        12
+Vampire       77    31   358     92     5         0
+Druid         43    40    37     32   398         0
+Cat          203    30    39     62   132        10
+Hero         122    86    20    103    87         8
+Horror        19    79   237     32    49         8
+Merfolk       27   300    16      9    67         0
+Artificer     95   120    42    116    37         2
+Total du tableau: 24088
+Creatures distinctes concernees par ces types: 12909
+Bartlett: chi2 = 66.83, p-value = 1.628e-08
+Chi2 d'independance: chi2 = 13705.69, ddl = 115, p-value = 0.000e+00
+Valeurs propres des facteurs: [3.653 1.012 0.539 0.308 0.264 0.225]
+Facteurs avec valeur propre >= 1: 2
+
+======================================================================
+ACM
+======================================================================
+Tableau disjonctif: 19169 creatures, 33 modalites
+                             Axe1   Axe2
+groupe_couleur_Incolore     0.442  3.608
+groupe_couleur_Monocolore   0.371 -0.190
+groupe_couleur_Multicolore -1.439 -0.064
+rarete_acm_autre           -0.156 -0.118
+rarete_acm_common           0.900 -0.097
+rarete_acm_mythic          -1.865  0.338
+rarete_acm_rare            -0.445 -0.047
+rarete_acm_uncommon        -0.041  0.065
+type_principal_Artificer   -0.221  9.133
+type_principal_Autre        0.072  0.714
+type_principal_Beast        0.742 -0.481
+type_principal_Bird         1.026 -0.438
+type_principal_Cat          0.317 -0.328
+type_principal_Cleric       1.750  3.673
+type_principal_Dragon      -1.790  0.324
+type_principal_Druid       -0.217 -1.181
+type_principal_Elemental   -0.204 -0.629
+type_principal_Elf         -0.013 -0.840
+type_principal_Goblin       0.935 -0.916
+type_principal_Hero        -4.340  0.372
+type_principal_Horror      -0.177 -0.459
+type_principal_Human       -0.387 -0.738
+type_principal_Knight       1.555  5.240
+type_principal_Merfolk      0.527 -0.912
+type_principal_Phyrexian    0.277  0.850
+type_principal_Rogue       -2.858 -0.868
+type_principal_Shaman       3.710 -1.434
+type_principal_Soldier      2.342  8.404
+type_principal_Spirit       0.363 -0.679
+type_principal_Vampire     -0.445 -0.728
+type_principal_Warrior      3.710 -1.434
+type_principal_Wizard      -1.420  3.401
+type_principal_Zombie       0.625 -0.892
+
+======================================================================
+K-MEANS
+======================================================================
+k = 2: inertie = 79161.1
+k = 3: inertie = 65991.4
+k = 4: inertie = 58129.7
+k = 5: inertie = 51673.3
+k = 6: inertie = 46500.1
+k = 7: inertie = 43000.2
+k = 8: inertie = 40378.4
+k = 9: inertie = 38209.8
+k = 10: inertie = 36323.5
+k retenu par la regle du coude: 5
+
+Effectifs:
+groupe
+0    1684
+1    4332
+2    6690
+3    3870
+4    1449
+
+Moyennes par groupe:
+        mana   prix  impressions  force  endurance  rarete
+groupe                                                    
+0       6.48   3.00         3.94   5.97       6.07    3.06
+1       4.72   0.36         1.69   3.43       3.64    1.83
+2       2.47   0.34         1.69   1.65       1.83    1.42
+3       3.09   1.05         5.29   2.13       2.41    2.72
+4       3.81  27.87         4.79   2.76       3.15    3.29
+
+Exemples proches du centre:
+Groupe 0: Numot, the Devastator, Doomsday Excruciator, Gilgamesh, Master-at-Arms, Tetzimoc, Primal Death, Mirkwood Elk, Treva, the Renewer, Demon of Fate's Design, Elder Brain
+Groupe 1: Memory Guardian, The Mouth of Sauron, Henge Guardian, Thundering Djinn, Dai Li Agents, Battlefront Krushok, Iridescent Hornbeetle, Dread Wight
+Groupe 2: Frazzled Editor, Spinneret Sliver, Mushroom Watchdogs, Mother Bear, Throne Warden, Drannith Stinger, Basking Broodscale, Knight of the Hokey Pokey
+Groupe 3: Vaan, Street Thief, Squee, Dubious Monarch, Order of the Sacred Torch, Urborg Scavengers, Rex, Cyber-Hound, Nick Valentine, Private Eye, Park Heights Maverick, Ornery Tumblewagg
+Groupe 4: Graveborn Muse, Elektra, Daughter of the Hand, Master of Ceremonies, Twenty-Toed Toad, Kalemne, Disciple of Iroas, Okaun, Eye of Chaos // Okaun, Eye of Chaos, Michiko Konda, Truth Seeker, Essence Sliver
+
+CAH: echantillon fixe de 3000 creatures, graine 0, dendrogramme tronque au niveau 4.
+
+======================================================================
+APPRENTISSAGE SUPERVISE
+======================================================================
+Cible: 5 quantiles du prix d'apprentissage, parmi les creatures de l'ACP
+Predicteurs: mana, force, endurance, rarete, impressions (log)
+Part moyenne de la plus grande classe de test: 0.211
+Exactitude moyenne sur 10 decoupes (20 % de test):
+  kNN k=3: 0.376 (ecart-type 0.008)
+  kNN k=5: 0.388 (ecart-type 0.004)
+  kNN k=7: 0.404 (ecart-type 0.010)
+  kNN k=11: 0.410 (ecart-type 0.007)
+  kNN k=15: 0.420 (ecart-type 0.005)
+  arbre gini: 0.409 (ecart-type 0.007)
+  arbre entropie: 0.409 (ecart-type 0.008)

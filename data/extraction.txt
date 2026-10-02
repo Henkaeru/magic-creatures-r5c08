@@ -1,0 +1,37 @@
+Construction de cards.csv
+Date : 2026-10-02T01:26:31
+Cartes : https://mtgjson.com/api/v5/AllPrintings.sqlite
+Prix : https://mtgjson.com/api/v5/AllPricesToday.json.gz
+Date des prix : 2026-10-01
+
+Une ligne correspond à un nom de carte. La plupart des colonnes
+proviennent de l'impression la plus récente, choisie selon la date de sortie,
+puis le code d'édition et enfin l'UUID. Une carte à deux faces
+compte pour deux lignes dans printing_count. face_count indique le nombre
+de faces, tandis que face_name et side correspondent à la face conservée.
+
+Certaines colonnes sont agrégées sur l'ensemble des impressions du nom.
+legality_* vaut Legal, Banned ou Restricted ; les valeurs vides des impressions
+promotionnelles sont ignorées. can_commander, can_brawl, can_oathbreaker,
+can_pauper_commander et can_predh valent 1 si une face ou une impression
+autorise le format correspondant. is_game_changer et is_reserved valent 1
+si au moins une impression possède la propriété correspondante.
+Les variables edhrec_rank (plus petit lorsque la carte est plus jouée),
+edhrec_saltiness, first_release_date, ruling_count, printing_count et
+face_count sont également regroupées sur le nom de carte.
+
+retail_price correspond à la moyenne, en dollars, du prix de vente au détail
+des cartes physiques en finition normale chez TCGPlayer, Card Kingdom
+et Mana Pool. Cette moyenne est ensuite calculée entre les impressions
+de la carte disposant d'un prix. rarity_rank code common 1, uncommon 2,
+rare 3, mythic 4, special 5 et bonus 6.
+Les autres indicateurs, comme is_promo ou is_funny, décrivent l'édition
+conservée.
+
+Colonnes : 93
+Impressions lues : 114557
+Noms de cartes : 35081
+Dont le type contient Creature : 19169
+Sans prix retail normal : 1540
+Game changers : 53
+Peuvent être commandants : 4093
